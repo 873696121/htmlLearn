@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <a v-bind:href="url">百度</a>
+        <button @click="change">切换</button>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                url: 'http://www.baidu.com'
+            },
+            methods: {
+                change: function () {
+                    this.url = 'http://www.qq.com'
+                }
+            }
+        });
+    </script>
+</body>
+</html>

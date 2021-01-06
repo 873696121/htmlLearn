@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <div>
+                用户名:
+                <input type="text" v-model= 'username'>
+            </div>
+            <div>
+                密码:
+                <input type="text" v-model= 'password' v-on:keyup.enter="submitbykey" v-on:keyup.delete="deletePassowrd">
+            </div>
+            <div>
+                <input type="submit" value="提交" @click="submit">
+            </div>
+        </form>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                username: '',
+                password: ''
+            },
+            methods: {
+                submit: function (){
+                    console.log(this.username, this.password)
+                },
+                submitbykey: function (){
+                    console.log(this.username, this.password)
+                },
+                deletePassowrd: function () {
+                    this.password = ''
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <div>{{msg}}</div>
+        <input type="text" v-model="msg">
+        <button type="submit" @click="num ++">点击</button>
+        {{num}}
+    </div>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                num: 1,
+                msg: 'hello, vue'
+            }
+        });
+    </script>
+</body>
+</html>
