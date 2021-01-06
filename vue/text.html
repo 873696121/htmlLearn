@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text"  v-model.number="num">
+        <button @click="handle">提交</button>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                num: ''
+            },
+            methods: {
+                handle: function () {
+                    alert(this.num * 3)
+                }
+            }
+        });
+    </script>
+</body>
+</html>
